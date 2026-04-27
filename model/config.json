@@ -1,0 +1,39 @@
+{
+  "nc_file": "data/train.nc",
+  "clim_file": "data/cmems/cmems_climatology.json",
+  "outdir": "experiments/clim_source_cmems__hidden_dim_128__huber_delta_0p5__lambda_smooth_0p0__lambda_spec_0p0__lr_0p0003__mask_fraction_0p25__mask_type_block__model_saits__seq_len_48",
+  "split_strategy": "gap_stratified",
+  "train_years": [
+    2010,
+    2021
+  ],
+  "val_years": [
+    2022,
+    2023
+  ],
+  "test_years": [
+    2024,
+    2025
+  ],
+  "val_frac": 0.15,
+  "test_frac": 0.15,
+  "model": "saits",
+  "hidden_dim": 128,
+  "n_layers": 2,
+  "dropout": 0.1,
+  "seq_len": 48,
+  "mask_fraction": 0.25,
+  "mask_type": "block",
+  "epochs": 300,
+  "patience": 10,
+  "batch_size": 128,
+  "lr": 0.0003,
+  "wd": 0.0001,
+  "huber_delta": 0.5,
+  "lambda_spec": 0.0,
+  "lambda_smooth": 0.0,
+  "seed": 42,
+  "device": "auto",
+  "num_workers": 2,
+  "n_params": 333701
+}
